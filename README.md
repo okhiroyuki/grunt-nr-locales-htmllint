@@ -13,17 +13,17 @@ npm install grunt-nr-loceles-htmllint --save-dev
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-nr-htmllint');
+grunt.loadNpmTasks('grunt-nr-locales-htmllint');
 ```
 
 ## The "nr_htmllint" task
 
 ### Overview
-In your project's Gruntfile, add a section named `nr_htmllint` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `nr_locales_htmllint` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  nr_htmllint: {
+  nr_locales_htmllint: {
     your_target: {
 	    options: {
 	      force: false
