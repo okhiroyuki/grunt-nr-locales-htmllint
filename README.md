@@ -3,33 +3,27 @@
 > Unofficial html5 linter and validator for node-red.
 
 ## Getting Started
-This plugin requires Grunt `~0.4.5`
 
-If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. 
-
-It also goes into the process of using `npm` and `node`. If you haven't installed NodeJS before, now is the time. Go to [NodeJS](http://nodejs.org/) (linked from the Grunt site) to download.  
-`npm` is installed with `node`. 
-
-Once you're familiar with that process, you may install this plugin with this command:
-
+### install
 ```shell
 npm install grunt-nr-htmllint --save-dev
 ```
 
+### edit Gruntfile
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
 grunt.loadNpmTasks('grunt-htmllint');
 ```
 
-## The "htmllint" task
+## The "nr_htmllint" task
 
 ### Overview
 In your project's Gruntfile, add a section named `htmllint` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  htmllint: {
+  nr_htmllint: {
     your_target: {
 	    options: {
 	      force: false
