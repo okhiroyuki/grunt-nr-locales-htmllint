@@ -7,7 +7,7 @@ var reportTemplate = [
 ].join('');
 
 module.exports = function (grunt) {
-    grunt.registerMultiTask('htmllint', 'HTML5 linter and validator.', function () {
+    grunt.registerMultiTask('nr_htmllint', 'HTML5 linter and validator.', function () {
         var htmllint = require('htmllint'),
             Promise = require('promise');
         var done = this.async();
@@ -16,7 +16,8 @@ module.exports = function (grunt) {
         var options = this.options({
             force: false,
             plugins: [],
-            htmllintrc: false
+            htmllintrc: false,
+            "id-class-style": "dash"
         });
 
         var force = options.force;
@@ -52,7 +53,9 @@ module.exports = function (grunt) {
                 }
 
                 var fileSrc = grunt.file.read(filePath);
-
+                console.log(fileSrc);
+                fileSrc = fileSrc.replace(/<script.*>/g,"<div>");
+                fileSrc = fileSrc.replace(/<\/script>/g,"</div>");
                 return htmllint(fileSrc, options);
             }).then(function (issues) {
                 if (issues === false) {
