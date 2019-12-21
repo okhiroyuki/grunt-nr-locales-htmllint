@@ -1,61 +1,37 @@
-'use strict';
-
 module.exports = function (grunt) {
     grunt.initConfig({
         jshint: {
             all: [
                 'Gruntfile.js',
                 'tasks/*.js',
-                '<%= nodeunit.tests %>'
+                'test/*.js'
             ],
             options: {
                 jshintrc: '.jshintrc'
             }
         },
-
-        // Configuration to be run (and then tested).
-        htmllint: {
-            default_options: {
-                options: {
-                    force: true
-                },
-                src: ['test/fixtures/*.html']
-            },
-            rc_file: {
+        nr_htmllint: {
+            default: {
                 options: {
                     force: true,
-                    htmllintrc: true
+                    "indent-width": false
                 },
-                src: ['test/fixtures/*.html']
+                src: ['test/fixtures/success.html']
             },
-            permissive: {
+            unclose_tag: {
                 options: {
                     force: true,
-                    'attr-bans': []
+                    "indent-width": false
                 },
-                src: ['test/fixtures/*.html']
-            },
-            bail: {
-                options: {
-                    force: true,
-                    maxerr: 1
-                },
-                src: ['test/fixtures/*.html']
-            },
-            htmllintrc: {
-                options: {
-                    force: true
-                },
-                src: ['test/fixtures/*.html']
-            },
-            fail: {
-                src: ['test/fixtures/*.html']
+                src: ['test/fixtures/unclose-tag.html']
             }
-        },
 
-        // Unit tests.
-        nodeunit: {
-            tests: ['test/*_test.js']
+        },
+        simplemocha: {
+            options: {
+                timeout: 60000
+            },
+            all: { src: ['test/*_spec.js'] }
         }
     });
 
@@ -64,8 +40,8 @@ module.exports = function (grunt) {
 
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-nodeunit');
+    grunt.loadNpmTasks("grunt-simple-mocha");
 
     // By default, lint and run all tests.
-    grunt.registerTask('default', ['jshint', 'nodeunit']);
+    grunt.registerTask('default', ['jshint', 'simplemocha:all']);
 };
