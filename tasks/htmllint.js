@@ -1,5 +1,3 @@
-'use strict';
-
 var reportTemplate = [
     '<%= filePath %>: (<%= issue.code %>), ',
     'line <%= issue.line %>, col <%= issue.column %>, ',
@@ -53,7 +51,6 @@ module.exports = function (grunt) {
                 }
 
                 var fileSrc = grunt.file.read(filePath);
-                console.log(fileSrc);
                 fileSrc = fileSrc.replace(/<script.*>/g,"<div>");
                 fileSrc = fileSrc.replace(/<\/script>/g,"</div>");
                 return htmllint(fileSrc, options);
