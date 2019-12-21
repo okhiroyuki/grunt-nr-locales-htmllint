@@ -10,7 +10,7 @@ module.exports = function (grunt) {
                 jshintrc: '.jshintrc'
             }
         },
-        nr_htmllint: {
+        nr_locales_htmllint: {
             default: {
                 options: {
                     force: true,

@@ -5,7 +5,7 @@ var reportTemplate = [
 ].join('');
 
 module.exports = function (grunt) {
-    grunt.registerMultiTask('nr_htmllint', 'HTML5 linter and validator.', function () {
+    grunt.registerMultiTask('nr_locales_htmllint', 'HTML5 linter and validator.', function () {
         var htmllint = require('htmllint'),
             Promise = require('promise');
         var done = this.async();

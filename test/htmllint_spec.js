@@ -4,9 +4,9 @@ var should = require('should');
 var REG_TOTAL = /\d+(?= errors in total)/gm;
 var REG_CODES = /E\d+(?=\))/gm;
 
-describe('nr_htmllint', function () {
+describe('nr_locales_htmllint', function () {
     it('success', (done) => {
-        exec('grunt nr_htmllint:default', function (err, output) {
+        exec('grunt nr_locales_htmllint:default', function (err, output) {
             var total = Number(output.match(REG_TOTAL)[0]);
             var codes = output.match(REG_CODES);
             should.equal(total,0);
@@ -16,7 +16,7 @@ describe('nr_htmllint', function () {
     });
 
     it('unclosed tag', (done) => {
-        exec('grunt nr_htmllint:unclose_tag', function (err, output) {
+        exec('grunt nr_locales_htmllint:unclose_tag', function (err, output) {
             var total = Number(output.match(REG_TOTAL)[0]);
             var codes = output.match(REG_CODES);
             should.equal(total,1);
