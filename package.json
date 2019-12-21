@@ -30,6 +30,9 @@
   },
   "keywords": [
     "gruntplugin",
-    "node-red"
+    "node-red",
+    "htmllint",
+    "html",
+    "lint"
   ]
 }
