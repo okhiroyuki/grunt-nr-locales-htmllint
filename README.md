@@ -13,7 +13,7 @@ npm install grunt-nr-htmllint --save-dev
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-htmllint');
+grunt.loadNpmTasks('grunt-nr-htmllint');
 ```
 
 ## The "nr_htmllint" task
