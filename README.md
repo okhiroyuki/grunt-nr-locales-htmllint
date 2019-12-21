@@ -19,7 +19,7 @@ grunt.loadNpmTasks('grunt-nr-htmllint');
 ## The "nr_htmllint" task
 
 ### Overview
-In your project's Gruntfile, add a section named `htmllint` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `nr_htmllint` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
