@@ -1,6 +1,6 @@
 {
-  "name": "grunt-nr-htmllint",
-  "description": "A grunt plugin for the unofficial HTML5 linter for node-red.",
+  "name": "grunt-nr-locales-htmllint",
+  "description": "A grunt plugin for the unofficial HTML5 linter for node-red locales.",
   "version": "0.1.0",
   "homepage": "https://github.com/okhiroyuki/grunt-nr-htmllint",
   "repository": {

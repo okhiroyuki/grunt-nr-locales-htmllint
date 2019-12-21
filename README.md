@@ -1,12 +1,12 @@
-# grunt-nr-htmllint
+# grunt-nr-locales-htmllint
 
-> Unofficial html5 linter and validator for node-red.
+> Unofficial html5 linter and validator for node-red locales.
 
 ## Getting Started
 
 ### install
 ```shell
-npm install grunt-nr-htmllint --save-dev
+npm install grunt-nr-loceles-htmllint --save-dev
 ```
 
 ### edit Gruntfile
