@@ -2,13 +2,13 @@
   "name": "grunt-nr-htmllint",
   "description": "A grunt plugin for the unofficial HTML5 linter for node-red.",
   "version": "0.3.0",
-  "homepage": "https://github.com/htmllint/grunt-htmllint",
+  "homepage": "https://github.com/okhiroyuki/grunt-nr-htmllint",
   "repository": {
     "type": "git",
-    "url": "https://github.com/htmllint/grunt-htmllint.git"
+    "url": "https://github.com/okhiroyuki/grunt-nr-htmllint.git"
   },
   "bugs": {
-    "url": "https://github.com/htmllint/grunt-htmllint/issues"
+    "url": "https://github.com/okhiroyuki/grunt-nr-htmllint/issues"
   },
   "license": "ISC",
   "engines": {
