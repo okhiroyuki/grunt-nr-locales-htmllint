@@ -44,8 +44,7 @@ module.exports = function (grunt) {
             },
             htmllintrc: {
                 options: {
-                    force: true,
-                    htmllintrc: 'test/fixtures/testrc.js'
+                    force: true
                 },
                 src: ['test/fixtures/*.html']
             },

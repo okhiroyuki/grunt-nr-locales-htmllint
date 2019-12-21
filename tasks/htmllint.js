@@ -16,7 +16,8 @@ module.exports = function (grunt) {
         var options = this.options({
             force: false,
             plugins: [],
-            htmllintrc: false
+            htmllintrc: false,
+            "id-class-style": "dash"
         });
 
         var force = options.force;
@@ -52,7 +53,10 @@ module.exports = function (grunt) {
                 }
 
                 var fileSrc = grunt.file.read(filePath);
-
+                console.log(fileSrc);
+                fileSrc = fileSrc.replace(/<script.*>/g,"<div>");
+                fileSrc = fileSrc.replace(/<\/script>/g,"</div>");
+                console.log(fileSrc);
                 return htmllint(fileSrc, options);
             }).then(function (issues) {
                 if (issues === false) {

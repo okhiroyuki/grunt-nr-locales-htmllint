@@ -1,13 +1,6 @@
-# grunt-htmllint
+# grunt-nr-htmllint
 
-[![npm version](http://img.shields.io/npm/v/grunt-htmllint.svg?style=flat-square)](https://npmjs.org/package/grunt-htmllint)
-[![license](http://img.shields.io/npm/l/grunt-htmllint.svg?style=flat-square)](https://npmjs.org/package/grunt-htmllint)
-[![dependencies](http://img.shields.io/david/htmllint/grunt-htmllint.svg?style=flat-square)](https://david-dm.org/htmllint/grunt-htmllint)
-[![devDependencies](http://img.shields.io/david/dev/htmllint/grunt-htmllint.svg?style=flat-square)](https://david-dm.org/htmllint/grunt-htmllint)
-
-[![Stories in Ready](https://badge.waffle.io/htmllint/grunt-htmllint.svg?label=ready&title=Ready)](http://waffle.io/htmllint/grunt-htmllint)
-
-> Unofficial html5 linter and validator.
+> Unofficial html5 linter and validator for node-red.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
@@ -20,7 +13,7 @@ It also goes into the process of using `npm` and `node`. If you haven't installe
 Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-htmllint --save-dev
+npm install grunt-nr-htmllint --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
@@ -38,13 +31,11 @@ In your project's Gruntfile, add a section named `htmllint` to the data object p
 grunt.initConfig({
   htmllint: {
     your_target: {
-	  options: {
-	    force: false,
-		plugins: ['htmllint-plugin-name'],
-		/* htmllint options go here */
-	  },
-	  src: [
-        'path/to/yo/html_files'
+	    options: {
+	      force: false
+	    },
+	    src: [
+        './locales/**/*.html'
       ]
     }
   },

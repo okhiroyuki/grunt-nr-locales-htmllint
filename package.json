@@ -1,6 +1,6 @@
 {
   "name": "grunt-htmllint",
-  "description": "A grunt plugin for the unofficial HTML5 linter.",
+  "description": "A grunt plugin for the unofficial HTML5 linter for node-red.",
   "version": "0.3.0",
   "homepage": "https://github.com/htmllint/grunt-htmllint",
   "repository": {
@@ -12,7 +12,7 @@
   },
   "license": "ISC",
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 8.0"
   },
   "scripts": {
     "test": "grunt"
@@ -22,12 +22,9 @@
   },
   "devDependencies": {
     "grunt": "^1.0.2",
-    "grunt-contrib-jshint": "^1.1.0",
-    "grunt-contrib-nodeunit": "^1.0.0",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-nodeunit": "^2.0.0",
     "promise": "^8.0.1"
-  },
-  "peerDependencies": {
-    "grunt": "^1.0.2"
   },
   "keywords": [
     "gruntplugin"
