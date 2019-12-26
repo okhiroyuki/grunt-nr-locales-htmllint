@@ -7,7 +7,7 @@
 ### install
 
 ```shell
-npm install grunt-nr-loceles-htmllint --save-dev
+npm install grunt-nr-locales-htmllint --save-dev
 ```
 
 ### edit Gruntfile
