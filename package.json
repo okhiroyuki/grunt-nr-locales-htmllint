@@ -18,13 +18,13 @@
     "test": "grunt"
   },
   "dependencies": {
-    "htmllint": "^0.7.2"
+    "htmllint": "^0.8.0"
   },
   "devDependencies": {
     "grunt": "^1.0.2",
     "grunt-contrib-jshint": "^2.1.0",
     "grunt-simple-mocha": "^0.4.1",
-    "mocha": "^6.2.2",
+    "mocha": "^7.0.1",
     "promise": "^8.0.1",
     "should": "^13.2.3"
   },
